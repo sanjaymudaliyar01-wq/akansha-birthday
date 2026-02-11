@@ -320,20 +320,6 @@ I Love You More Than Words Can Ever Say ❤️
 
 <script>
 
-/* 🎵 Music */
-let music = new Audio("song.mp3");
-music.loop = true;
-
-/* Overlay Click */
-document.getElementById("overlay").addEventListener("click", function(){
-    music.play();
-    document.getElementById("overlay").style.opacity="0";
-    setTimeout(()=>{
-        document.getElementById("overlay").style.display="none";
-        document.getElementById("mainContent").style.opacity="1";
-    },1000);
-});
-
 /* Surprise Button */
 function showLove(){
     document.getElementById("secret").style.display="block";
@@ -354,4 +340,5 @@ for(let i=0;i<35;i++){
 
 </body>
 </html>
+
 
