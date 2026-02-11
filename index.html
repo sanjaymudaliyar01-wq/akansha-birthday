@@ -276,38 +276,23 @@ Sanjay
 </div>
 
 <script>
-<script>
 
-let music = new Audio("song1.mp3");
-music.loop = true;
-music.volume = 0;   // start silent
-
-function fadeInAudio(audio, duration) {
-    let targetVolume = 1; // max volume
-    let stepTime = 100; // 0.1 sec
-    let steps = duration / stepTime;
-    let volumeStep = targetVolume / steps;
-
-    let fade = setInterval(() => {
-        if (audio.volume < targetVolume) {
-            audio.volume = Math.min(audio.volume + volumeStep, targetVolume);
-        } else {
-            clearInterval(fade);
-        }
-    }, stepTime);
-}
+let music = new Audio("song.mp3.mp3");
 
 function showLove(){
     document.getElementById("secret").style.display="block";
+    music.loop = true;
     music.play();
-    fadeInAudio(music, 3000); // 3 second smooth fade in
 }
 
 </script>
+
+
 </script>
 
 </body>
 </html>
+
 
 
 
