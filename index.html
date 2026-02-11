@@ -9,11 +9,23 @@
 html, body {
     margin:0;
     padding:0;
-    height:100%;
-    font-family: 'Segoe UI', sans-serif;
+    font-family:'Segoe UI', sans-serif;
     overflow-x:hidden;
 }
 
+/* Image Styling */
+.photo{
+    margin:30px 0;
+}
+
+.photo img{
+    width:100%;
+    max-width:400px;
+    border-radius:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.4);
+}
+
+/* Background */
 body {
     background: linear-gradient(-45deg,#ff6a88,#ff99ac,#ffc3a0,#ff758c);
     background-size:400% 400%;
@@ -28,10 +40,33 @@ body {
     100%{background-position:0% 50%}
 }
 
+/* Romantic Black Overlay */
+#overlay{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:black;
+    color:white;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:26px;
+    z-index:9999;
+    cursor:pointer;
+    transition:1s ease;
+    text-align:center;
+    padding:20px;
+}
+
+/* Main Content */
 .container{
     padding:60px 20px 100px 20px;
     max-width:900px;
     margin:auto;
+    opacity:0;
+    transition:2s ease;
     position:relative;
     z-index:2;
 }
@@ -70,7 +105,7 @@ button:hover{
     font-weight:bold;
 }
 
-/* ❤️ floating hearts background */
+/* Floating Hearts */
 .heart{
     position:fixed;
     bottom:-50px;
@@ -89,15 +124,15 @@ button:hover{
 
 <body>
 
-<div class="container">
+<div id="overlay">
+Tap To Open Your Surprise ❤️
+</div>
+
+<div class="container" id="mainContent">
 
 <h1>Happy Birthday Akansha Gaur ❤️</h1>
 
 <div class="message">
-🌸 Happy Birthday, Akansha 🌸
-
-
-<p>
 🌸 Happy Birthday, Akansha Gaur 🌸
 The most beautiful chapter of my life
 
@@ -257,43 +292,65 @@ and I still fall for you every single day.
 
 Forever and Always,
 Sanjay ❤️
-</p>
+</div>
 
+<div class="photo">
+  <img src="image1.jpg" alt="Memory">
+</div>
 
+<div class="photo">
+  <img src="image2.jpg" alt="Memory">
+</div>
 
+<div class="photo">
+  <img src="image3.jpg" alt="Memory">
+</div>
 
-
+<div class="photo">
+  <img src="image4.jpg" alt="Memory">
 </div>
 
 <button onclick="showLove()">Tap For A Surprise 💖</button>
 
 <div id="secret">
-I Love You More Than Words Can Ever Say ❤️  
-Forever Yours,  
-Sanjay
+I Love You More Than Words Can Ever Say ❤️
 </div>
 
 </div>
 
 <script>
 
-let music = new Audio("song.mp3.mp3");
+/* 🎵 Music */
+let music = new Audio("music.mp3");
+music.loop = true;
 
+/* Overlay Click */
+document.getElementById("overlay").addEventListener("click", function(){
+    music.play();
+    document.getElementById("overlay").style.opacity="0";
+    setTimeout(()=>{
+        document.getElementById("overlay").style.display="none";
+        document.getElementById("mainContent").style.opacity="1";
+    },1000);
+});
+
+/* Surprise Button */
 function showLove(){
     document.getElementById("secret").style.display="block";
-    music.loop = true;
-    music.play();
 }
 
-</script>
-
+/* Floating Hearts */
+for(let i=0;i<35;i++){
+    let heart=document.createElement("div");
+    heart.className="heart";
+    heart.style.left=Math.random()*100+"vw";
+    heart.style.fontSize=(Math.random()*25+20)+"px";
+    heart.innerHTML="❤️";
+    heart.style.animationDuration=(Math.random()*5+6)+"s";
+    document.body.appendChild(heart);
+}
 
 </script>
 
 </body>
 </html>
-
-
-
-
-
