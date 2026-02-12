@@ -1,354 +1,174 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Happy Birthday Akansha ❤️</title>
+  <meta charset="UTF-8">
+  <title>I Love You Animation</title>
+  <style>
+    /* Reset & Box Sizing */
+    *, *:before, *:after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-<style>
-html, body {
-    margin:0;
-    padding:0;
-    font-family:'Segoe UI', sans-serif;
-    overflow-x:hidden;
-}
+    html, body {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #282a36;
+      font-size: 62.5%;
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    }
 
-/* Image Styling */
-.photo{
-    margin:30px 0;
-}
+    .container {
+      width: 50rem;
+      height: 20rem;
+      position: relative;
+    }
 
-.photo img{
-    width:100%;
-    max-width:400px;
-    border-radius:20px;
-    box-shadow:0 10px 25px rgba(0,0,0,0.4);
-}
+    .svg-container {
+      z-index: 2;
+      position: absolute;
+    }
 
-/* Background */
-body {
-    background: linear-gradient(-45deg,#ff6a88,#ff99ac,#ffc3a0,#ff758c);
-    background-size:400% 400%;
-    animation: gradient 12s ease infinite;
-    color:white;
-    text-align:center;
-}
+    .mo-container {
+      width: 100%;
+      height: 100%;
+    }
 
-@keyframes gradient {
-    0%{background-position:0% 50%}
-    50%{background-position:100% 50%}
-    100%{background-position:0% 50%}
-}
+    .line {
+      fill: none;
+      stroke: #ffffff;
+      stroke-width: 8;
+      stroke-linecap: round;
+      stroke-miterlimit: 10;
+    }
 
-/* Romantic Black Overlay */
-#overlay{
-    position:fixed;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
-    background:black;
-    color:white;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-size:26px;
-    z-index:9999;
-    cursor:pointer;
-    text-align:center;
-    padding:20px;
-    transition:1s ease;
-}
+    .lttr {
+      fill: #a5b9c7;
+      opacity: 0; /* start hidden, will appear via animation */
+    }
 
-/* Main Content */
-.container{
-    padding:60px 20px 100px 20px;
-    max-width:900px;
-    margin:auto;
-    opacity:0;
-    transition:2s ease;
-    position:relative;
-    z-index:2;
-}
+    .sound {
+      position: fixed;
+      color: #a5b9c7;
+      font-size: 1.6rem;
+      bottom: 1rem;
+      right: 1rem;
+      text-decoration: underline;
+      cursor: pointer;
+    }
 
-h1{
-    font-size:38px;
-    margin-bottom:30px;
-}
-
-.message{
-    font-size:20px;
-    line-height:1.9;
-    white-space:pre-line;
-}
-
-button{
-    margin-top:40px;
-    padding:14px 35px;
-    border:none;
-    border-radius:30px;
-    font-size:18px;
-    background:white;
-    color:#ff4d6d;
-    cursor:pointer;
-    transition:0.3s;
-}
-
-button:hover{
-    transform:scale(1.07);
-}
-
-#secret{
-    display:none;
-    margin-top:40px;
-    font-size:24px;
-    font-weight:bold;
-}
-
-/* Floating Hearts */
-.heart{
-    position:fixed;
-    bottom:-50px;
-    color:white;
-    animation: floatUp linear infinite;
-    pointer-events:none;
-    z-index:1;
-}
-
-@keyframes floatUp{
-    from{transform:translateY(0) scale(0.6);}
-    to{transform:translateY(-110vh) scale(1.2);}
-}
-</style>
+    .sound--off {
+      text-decoration: line-through;
+    }
+  </style>
 </head>
-
 <body>
 
-<!-- Overlay -->
-<div id="overlay">
-Tap To Open Your Surprise ❤️
+<div class="container">
+  <svg class="svg-container" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 200">
+    <line class="line line--left" x1="10" y1="17" x2="10" y2="183"></line>
+    <line class="line line--rght" x1="490" y1="17" x2="490" y2="183"></line>
+    <g>
+      <path class="lttr lttr--I" d="M42.2,73.9h11.4v52.1H42.2V73.9z"></path>
+      <path class="lttr lttr--L" d="M85.1,73.9h11.4v42.1h22.8v10H85.1V73.9z"></path>
+      <path class="lttr lttr--O" d="M123.9,100c0-15.2,11.7-26.9,27.2-26.9s27.2,11.7,27.2,26.9s-11.7,26.9-27.2,26.9S123.9,115.2,123.9,100zM166.9,100c0-9.2-6.8-16.5-15.8-16.5c-9,0-15.8,7.3-15.8,16.5s6.8,16.5,15.8,16.5C160.1,116.5,166.9,109.2,166.9,100z"></path>
+      <path class="lttr lttr--V" d="M180.7,73.9H193l8.4,22.9c1.7,4.7,3.5,9.5,5,14.2h0.1c1.7-4.8,3.4-9.4,5.2-14.3l8.6-22.8h11.7l-19.9,52.1h-11.5L180.7,73.9z"></path>
+      <path class="lttr lttr--E" d="M239.1,73.9h32.2v10h-20.7v10.2h17.9v9.5h-17.9v12.4H272v10h-33V73.9z"></path>
+      <path class="lttr lttr--Y" d="M315.8,102.5l-20.1-28.6H309l6.3,9.4c2,3,4.2,6.4,6.3,9.6h0.1c2-3.2,4.1-6.4,6.3-9.6l6.3-9.4h12.9l-19.9,28.5v23.6h-11.4V102.5z"></path>
+      <path class="lttr lttr--O2" d="M348.8,100c0-15.2,11.7-26.9,27.2-26.9c15.5,0,27.2,11.7,27.2,26.9s-11.7,26.9-27.2,26.9C360.5,126.9,348.8,115.2,348.8,100z M391.8,100c0-9.2-6.8-16.5-15.8-16.5c-9,0-15.8,7.3-15.8,16.5s6.8,16.5,15.8,16.5C385,116.5,391.8,109.2,391.8,100z"></path>
+      <path class="lttr lttr--U" d="M412.4,101.1V73.9h11.4v26.7c0,10.9,2.4,15.9,11.5,15.9c8.4,0,11.4-4.6,11.4-15.8V73.9h11v26.9c0,7.8-1.1,13.5-4,17.7c-3.7,5.3-10.4,8.4-18.7,8.4c-8.4,0-15.1-3.1-18.8-8.5C413.4,114.2,412.4,108.5,412.4,101.1z"></path>
+    </g>
+  </svg>
+  <div class="mo-container"></div>
 </div>
 
-<!-- Main Content -->
-<div class="container" id="mainContent">
+<!-- Audio -->
+<audio class="blup" style="display:none">
+  <source src="https://www.freesound.org/data/previews/265/265115_4373976-lq.mp3" type="audio/ogg">
+</audio>
+<audio class="blop" style="display:none">
+  <source src="https://www.freesound.org/data/previews/265/265115_4373976-lq.mp3" type="audio/ogg">
+</audio>
 
-<h1>Happy Birthday Akansha Gaur ❤️</h1>
+<div class="sound">sound</div>
 
-<div class="message">
-🌸 Happy Birthday, Akansha 🌸<br><br>
-<p>
-🌸 Happy Birthday, Akansha Gaur 🌸
-
-The most beautiful chapter of my life
-
-My Dearest Akansha,
-
-Aaj ka din sirf calendar ka ek date nahi hai.
-Yeh woh din hai jab kismat ne decide kiya tha
-ki meri life me roshni bhejni hai…
-aur us roshni ka naam hai Akansha.
-
-Kabhi kabhi main sochta hoon —
-agar tum meri life me nahi aati,
-toh shayad main muskura toh leta…
-par dil se khush hona nahi jaanta.
-
-Tum meri zindagi ka woh hissa ho
-jise main lafzon me poora kabhi samjha hi nahi paunga.
-Tum hawa ki tarah ho —
-dikhti nahi,
-par har waqt mehsoos hoti ho.
-
-5 saal…
-5 saal pehle shayad hum dono ko nahi pata tha
-ki ek chhoti si baat, ek simple si hello,
-ek din itni gehri kahani ban jayegi.
-    <div class="photo">
-  <img src="image1.jpg" alt="Our Memory">
-</div>
-
-
-In 5 saalon me humne sirf waqt nahi bitaya,
-humne ek dusre ko samjha,
-saha,
-thoda ladhe,
-bahut hase,
-aur sabse important —
-kabhi chhoda nahi.
-
-Darling ,
-tum meri aadat nahi…
-tum meri zarurat ho.
-
-Jab din bura hota hai,
-tumhari awaaz meri therapy ban jaati hai.
-
-Jab main overthink karta hoon,
-tumhara “it’s okay” mere dimaag ka noise band kar deta hai.
-
-Tumhari hasi…
-jaise baarish ke baad ki mitti ki khushboo.
-Tumhari aankhen…
-jaise shaam ka aasmaan,
-jisme main khud ko kho dena chahta hoon.
-
-Main maanta hoon,
-main perfect nahi hoon.
-Kabhi ziddi, kabhi immature,
-kabhi unnecessary attitude.
-
-Lekin ek baat hamesha sach rahegi —
-mera pyaar tumhare liye kabhi kam nahi hoga.
-
-Agar zindagi ek safar hai,
-toh main har mod pe tumhara haath pakad kar chalna chahta hoon.
-    <div class="photo">
-  <img src="image2.jpg" alt="Our Memory">
-</div>
-
-
-Main future imagine karta hoon —
-tum balcony me khadi ho,
-haath me coffee,
-baal halki hawa me udte hue…
-aur main tumhe bas dekh raha hoon,
-soch raha hoon —
-“Yeh meri hai.”
-
-Main imagine karta hoon
-chhoti chhoti fights jo 10 minute baad hug me badal jaati hain.
-Late night talks jo 3 baje tak khatam nahi hoti.
-Random road trips jahan destination important nahi,
-saath hona important hota hai.
-
-My Darling ,
-tum meri strength ho.
-Main gym me weight uthata hoon
-par asli strength mujhe tumse milti hai.
-    <div class="photo">
-  <img src="image3.jpg" alt="Our Memory">
-</div>
-
-
-Jab main life me struggle karta hoon,
-jab future ka pressure feel hota hai,
-jab khud par doubt hota hai —
-tum meri motivation ban jaati ho.
-
-Tumne mujhe better insaan banaya hai.
-Tumne mujhe sikhaya ki pyaar possess karna nahi,
-protect karna hota hai.
-
-Aaj tumhara birthday hai.
-Aaj main sirf ek wish nahi karta.
-Main dua karta hoon.
-
-Main dua karta hoon ki:
-Tum hamesha khush raho.
-Tumhare sapne sach ho.
-Tum kabhi khud ko kam na samjho.
-Tumhe duniya hamesha respect kare.
-
-Aur agar kabhi duniya tumhe samajh na paaye,
-toh yaad rakhna —
-tumhara ek insan hai
-jo tumhe har haal me samjhega.
-
-Akansha,
-agar kabhi andhera ho,
-toh main tumhara diya banunga.
-
-Agar kabhi tum girne lago,
-toh main tumhara sahara banunga.
-
-Agar kabhi tum ro do,
-toh main tumhari wajah se nahi,
-tumhare saath ro dunga.
-
-Main promise karta hoon —
-main tumhe kabhi akela feel nahi hone dunga.
-Main tumhara biggest supporter rahunga.
-Main tumhari respect hamesha protect karunga.
-
-5 saal ho gaye…
-par mere liye tum aaj bhi waise hi special ho
-jaise pehle din thi.
-
-Shayad hum perfect couple nahi hain.
-Par hum real hain.
-Aur real pyaar hi sabse rare hota hai.
-
-Tum meri kahani ka sabse khoobsurat hissa ho.
-Aur main chahta hoon
-yeh kahani kabhi khatam na ho.
-    <div class="photo">
-  <img src="image4.jpg" alt="Our Memory">
-</div>
-
-
-Happy Birthday, Akansha , My Baby , Darling , M y Sweetheart , Gulab Jamun , My Future Wifey  . 🎂❤️
-
-Thank you for loving me.
-Thank you for trusting me.
-Thank you for choosing me again and again.
-
-5 years down…
-and I still fall for you every single day.
-
-Forever and Always,
-Sanjay ❤️
-</p>
-<div class="photo">
-<img src="image1.jpg" alt="Memory 1">
-</div>
-
-<div class="photo">
-<img src="image2.jpg" alt="Memory 2">
-</div>
-
-<div class="photo">
-<img src="image3.jpg" alt="Memory 3">
-</div>
-
-<div class="photo">
-<img src="image4.jpg" alt="Memory 4">
-</div>
-
-<button onclick="showLove()">Tap For A Surprise 💖</button>
-
-<div id="secret">
-I Love You More Than Words Can Ever Say ❤️
-</div>
-
-</div>
-</div>
-
+<!-- Mo.js Library -->
+<script src="https://cdn.jsdelivr.net/mojs/latest/mo.min.js"></script>
 <script>
-/* Overlay Click - Show content */
-document.getElementById("overlay").addEventListener("click", function(){
-    document.getElementById("overlay").style.opacity = "0";
-    setTimeout(()=>{
-        document.getElementById("overlay").style.display = "none";
-        document.getElementById("mainContent").style.opacity = "1";
-    }, 500);
-});
+const qs = document.querySelector.bind(document);
+const easingHeart = mojs.easing.path(
+  "M0,100C2.9,86.7,33.6-7.3,46-7.3s15.2,22.7,26,22.7S89,0,100,0"
+);
 
-/* Surprise Button */
-function showLove(){
-    document.getElementById("secret").style.display="block";
-}
+const el = {
+  container: qs(".mo-container"),
+  i: qs(".lttr--I"),
+  l: qs(".lttr--L"),
+  o: qs(".lttr--O"),
+  v: qs(".lttr--V"),
+  e: qs(".lttr--E"),
+  y: qs(".lttr--Y"),
+  o2: qs(".lttr--O2"),
+  u: qs(".lttr--U"),
+  lineLeft: qs(".line--left"),
+  lineRight: qs(".line--rght"),
+  colTxt: "#763c8c",
+  colHeart: "#fa4843",
+  blup: qs(".blup"),
+  blop: qs(".blop"),
+  sound: qs(".sound")
+};
 
-/* Floating Hearts */
-for(let i=0;i<35;i++){
-    let heart=document.createElement("div");
-    heart.className="heart";
-    heart.style.left=Math.random()*100+"vw";
-    heart.style.fontSize=(Math.random()*25+20)+"px";
-    heart.innerHTML="❤️";
-    heart.style.animationDuration=(Math.random()*5+6)+"s";
-    document.body.appendChild(heart);
+class Heart extends mojs.CustomShape {
+  getShape() {
+    return '<path d="M50,88.9C25.5,78.2,0.5,54.4,3.8,31.1S41.3,1.8,50,29.9c8.7-28.2,42.8-22.2,46.2,1.2S74.5,78.2,50,88.9z"/>';
+  }
+  getLength() { return 200; }
 }
+mojs.addShape("heart", Heart);
+
+const crtBoom = (delay=0, x=0, rd=46) => {
+  const parent = el.container;
+  const crcl = new mojs.Shape({
+    shape:"circle", fill:"none", stroke:el.colTxt, strokeWidth:{5:0}, radius:{[rd]:[rd+20]}, easing:"quint.out", duration:500/3, parent, delay, x
+  });
+  const brst = new mojs.Burst({
+    radius:{[rd+15]:110}, angle:"rand(60,180)", count:3, timeline:{delay}, parent, x,
+    children:{ radius:[5,3,7], fill:el.colTxt, scale:{1:0,easing:"quad.in"}, pathScale:[0.8,null], degreeShift:["rand(13,60)",null], duration:1000/3, easing:"quint.out" }
+  });
+  return [crcl, brst];
+};
+
+const crtLoveTl = () => {
+  const move = 1000, boom = 200, easing="sin.inOut", easingBoom="sin.in", easingOut="sin.out", opts={duration:move, easing, opacity:1}, delta=150;
+  return new mojs.Timeline().add([
+    new mojs.Tween({
+      duration:move,
+      onStart:()=>{[el.i,el.l,el.o,el.v,el.e,el.y,el.o2,el.u].forEach(el=>el.style.opacity=1);},
+      onComplete:()=>{[el.l,el.o,el.v,el.e].forEach(el=>el.style.opacity=0); el.blop.play();}
+    }),
+    new mojs.Tween({duration:move*2+boom, onComplete:()=>{[el.y,el.o2].forEach(el=>el.style.opacity=0); el.blop.play();}}),
+    new mojs.Tween({duration:move*3+boom*2-delta, onComplete:()=>{el.i.style.opacity=0; el.blop.play();}}),
+    new mojs.Tween({duration:move*3+boom*2, onComplete:()=>{el.u.style.opacity=0; el.blup.play();}}),
+    new mojs.Tween({duration:50, delay:4050, onUpdate:progress=>{[el.i,el.l,el.o,el.v,el.e,el.y,el.o2,el.u].forEach(el=>el.style.opacity=progress);}, onComplete:()=>{[el.i,el.l,el.o,el.v,el.e,el.y,el.o2,el.u].forEach(el=>el.style.opacity=1);}}),
+    ...crtBoom(move,-64,46),
+    ...crtBoom(move*2+boom,18,34),
+    ...crtBoom(move*3+boom*2-delta,-64,34),
+    ...crtBoom(move*3+boom*2,45,34)
+  ]);
+};
+
+const loveTl = crtLoveTl().play();
+setInterval(()=>{loveTl.replay();},4300);
+
+const volume = 0.2;
+el.blup.volume=volume; el.blop.volume=volume;
+
+const toggle = (()=>{let on=true; return ()=>{if(on){el.blup.volume=0;el.blop.volume=0;el.sound.classList.add("sound--off");} else{el.blup.volume=volume;el.blop.volume=volume;el.sound.classList.remove("sound--off");} on=!on;};})();
+el.sound.addEventListener("click", toggle);
 </script>
-
 </body>
 </html>
